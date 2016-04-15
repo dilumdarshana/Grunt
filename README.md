@@ -14,3 +14,5 @@ Source: https://github.com/gruntjs/grunt-contrib-concat
 - npm install grunt-contrib-watch --save-dev -> This will automatically do build on file change
 Srouce: https://www.npmjs.com/package/grunt-contrib-watch
 
+- grunt -> To run the tool
+

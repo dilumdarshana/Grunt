@@ -3,6 +3,8 @@ module.exports = function (grunt) {
    	//Load required Grunt tasks.
 	grunt.loadNpmTasks ('grunt-contrib-concat');
 	grunt.loadNpmTasks ('grunt-contrib-watch');
+	grunt.loadNpmTasks ('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// Project configuration.
 	grunt.initConfig ({
@@ -26,8 +28,26 @@ module.exports = function (grunt) {
 		    	tasks: ['concat:css']
 		  	}
 		},
+		cssmin: {
+		  	target: {
+		    	files: [{
+			      	expand: true,
+			      	cwd: 'build/css',
+			      	src: ['*.css', '!*.min.css'],
+			      	dest: 'build/css',
+			      	ext: '.min.css'
+		    	}]
+		  	}
+		},
+		uglify: {
+		    js: {
+		      	files: {
+		        	'build/js/built.min.js': ['build/js/built.js']
+		      	}
+	    	}
+	  	}
 	});
 
 	// registering tasks
-	grunt.registerTask ('default', ['concat', 'watch']);
+	grunt.registerTask ('default', ['concat', 'cssmin', 'uglify', 'watch']);
 };
