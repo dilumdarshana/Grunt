@@ -1,0 +1,26 @@
+{
+  "name": "GruntProject",
+  "version": "1.0.0",
+  "description": "- npm install -g grunt-cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dilumdarshana/Grunt.git"
+  },
+  "author": "Dilum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dilumdarshana/Grunt/issues"
+  },
+  "homepage": "https://github.com/dilumdarshana/Grunt",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
