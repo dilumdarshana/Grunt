@@ -1,4 +1,4 @@
-# Steps
+# Steps 
 
 - npm install -g grunt-cli
 
